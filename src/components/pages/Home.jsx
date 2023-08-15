@@ -7,9 +7,9 @@ import {
   Footer,
   Header,
   Specilizing,
-} from "../layouts/home03/index";
-import  Testimonial  from "../layouts/home03/Testimonial";
-class Home03 extends Component {
+} from "../layouts/home/index";
+import  Testimonial  from "../layouts/home/Testimonial";
+class Home extends Component {
   render() {
     return (
       <div className="body-copyright-light fixed counter-scroll has-one-page home3">
@@ -33,4 +33,4 @@ class Home03 extends Component {
   }
 }
 
-export default Home03;
+export default Home;
