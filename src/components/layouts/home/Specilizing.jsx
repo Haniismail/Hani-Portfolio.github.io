@@ -26,7 +26,7 @@ class Specilizing extends Component {
         {
           id: 3,
           classimg: "featured-post mg-b40",
-          srcimg: "./images/section/20.png",
+          srcimg: "./images/section/20.jpeg",
           altimg: "images",
           title: "Full-stack web development",
           text01: "A mixture of both frontend and backend technologies",
@@ -46,8 +46,8 @@ class Specilizing extends Component {
                 className="flat-title animate-element wow delay5 fadeInDown"
                 data-wow-delay="0.5s"
               >
-                <h2 className="title-section color-d19 mg-b44 text-center">
-                  SPECILIZING IN
+                <h2 className="title-section  mg-b44 text-center">
+                  SPECILIAZING IN
                 </h2>
               </div>
               <div
