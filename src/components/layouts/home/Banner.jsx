@@ -17,9 +17,12 @@ class Banner extends Component {
                 <span>Hello, </span>
                 <span className="cd-words-wrapper color-d6">
                   <b className="is-visible"> I’m Hani !</b>
-                  <b> Web developer !!</b>
-                  <b> Nice to see
-                  </b>
+                  <b style={{ fontSize: "57px" }}>Viral Ventures Media Owner</b>
+                  <b style={{ fontSize: "56px" }}>Automation & SMMA Agency</b>
+                  <b style={{ fontSize: "56px" }}>a Web developer</b>
+                  <b style={{ fontSize: "56px" }}>I also freelance</b>
+                  <b style={{ fontSize: "65px" }}>I'm trilingual as well !</b>
+                  <b style={{ fontSize: "65px" }}>Reach out to me </b>
                 </span>
               </h1>
               <p className="lt-sp02 mg-b51">
@@ -49,9 +52,7 @@ class Banner extends Component {
             <div
               className="site-list has-border text-center animate-element wow delay5 fadeInUp"
               data-wow-delay="0.3s"
-            >
-             
-            </div>
+            ></div>
           </div>
         </div>
         ¸
