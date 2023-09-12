@@ -18,7 +18,7 @@ class Banner extends Component {
                 <span className="cd-words-wrapper color-d6">
                   <b className="is-visible"> I’m Hani !</b>
                   <b> Web developer !!</b>
-                  <b> Check out My portfolio
+                  <b> Nice to see
                   </b>
                 </span>
               </h1>
