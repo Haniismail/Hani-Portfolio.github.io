@@ -52,20 +52,20 @@ class CaseStudy extends Component {
                 <div className="image-link t1">
                   <div className="portfolio-template-link text-center">
                     <a
-                      href="https://takikids.com"
+                      href="https://viralventuresmedia.vercel.app/"
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Takikids admin dashboard
+                      Viral Ventures Media
                     </a>
                   </div>
                   <div className="featured-post">
                     <a
-                      href="https://takikids.com"
+                      href="https://viralventuresmedia.vercel.app/"
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <img src="images/section/takikids.jpeg" alt="images" />
+                      <img src="images/section/vvm.jpeg" alt="images" />
                     </a>
                   </div>
                 </div>
@@ -111,20 +111,12 @@ class CaseStudy extends Component {
                   </div>
                   <div className="image-link t1">
                     <div className="portfolio-template-link text-center">
-                      <a
-                        href=""
-                        target="_blank"
-                        rel="noreferrer"
-                      >
+                      <a href="" target="_blank" rel="noreferrer">
                         Linkefoot (under construction)
                       </a>
                     </div>
                     <div className="featured-post">
-                      <a
-                        href=""
-                        target="_blank"
-                        rel="noreferrer"
-                      >
+                      <a href="" target="_blank" rel="noreferrer">
                         <img src="images/section/linkefoot.jpeg" alt="images" />
                       </a>
                     </div>
