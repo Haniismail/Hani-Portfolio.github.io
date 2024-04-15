@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class About extends Component {
   render() {
@@ -33,18 +33,19 @@ class About extends Component {
                   </div>
                 </div>
               </div>
-              <div className="fact">
-                <div className="btn-contact bg-s1 text-center">
-                  <h4 className="title color-d12">
-                    Get a project? Let’s talk.
-                  </h4>
-
-                  <a
-                    className="email color-s1 color-d14"
-                    href="mailto:Emailofhaniismail@gmail.com"
-                  >
-                    Emailofhaniismail@gmail.com
-                  </a>
+              <div className="col-lg-5">
+                <div className="fact">
+                  <div className="btn-contact bg-s1 text-center">
+                    <h4 className="title color-d12">
+                      Get a project? Let's talk.
+                    </h4>
+                    <a
+                      className="email color-s1 color-d14"
+                      href="mailto:Emailofhaniismail@gmail.com"
+                    >
+                      Emailofhaniismail@gmail.com
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

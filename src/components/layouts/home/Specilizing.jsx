@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 class Specilizing extends Component {
   constructor(props) {
     super(props);
@@ -7,30 +7,30 @@ class Specilizing extends Component {
       card: [
         {
           id: 1,
-          classimg: "featured-post mg-b43",
-          srcimg: "./images/section/23.jpeg",
-          altimg: "images",
-          title: "Front-end web development",
-          text01: "React.js Redux and Sass",
-          text02: "JavaScript and Typscript",
+          classimg: 'featured-post mg-b43',
+          srcimg: './images/section/23.jpeg',
+          altimg: 'images',
+          title: 'Front-end web development',
+          text01: 'React.js Redux and Sass',
+          text02: 'JavaScript and Typscript',
         },
         {
           id: 2,
-          classimg: "featured-post mg-b42",
-          srcimg: "./images/section/22.jpeg",
-          altimg: "images",
-          title: "Back-end web development",
-          text01: "Node.js Express.js sequelize",
-          text02: "MongoDB MySQL",
+          classimg: 'featured-post mg-b42',
+          srcimg: './images/section/22.jpeg',
+          altimg: 'images',
+          title: 'Back-end web development',
+          text01: 'Node.js Express.js sequelize',
+          text02: 'MongoDB MySQL',
         },
         {
           id: 3,
-          classimg: "featured-post mg-b40",
-          srcimg: "./images/section/20.jpeg",
-          altimg: "images",
-          title: "Full-stack web development",
-          text01: "A mixture of both frontend and backend technologies",
-          text02: "Result in a robust clean code and eaasy to maintain",
+          classimg: 'featured-post mg-b40',
+          srcimg: './images/section/20.jpeg',
+          altimg: 'images',
+          title: 'Full-stack web development',
+          text01: 'A mixture of both frontend and backend technologies',
+          text02: 'Result in a robust clean code and eaasy to maintain',
         },
       ],
     };
@@ -82,7 +82,7 @@ class Specilizing extends Component {
                   className="featured-post animate-element wow delay5 fadeZooming"
                   data-wow-delay="0.5s"
                 >
-                  <img src="images/section/38.jpeg" alt="images" />
+                  <img src="images/section/38.png" alt="images" />
                 </div>
               </div>
               <div className="col-lg-6 col-12">
