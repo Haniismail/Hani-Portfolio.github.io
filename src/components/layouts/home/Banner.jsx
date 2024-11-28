@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import HaniCV from "./documents/cv.pdf";
+import React, { Component } from 'react';
+import HaniCV from './documents/cv.pdf';
 class Banner extends Component {
   render() {
     return (
@@ -11,24 +11,33 @@ class Banner extends Component {
               data-wow-delay="0.3s"
             >
               <div className="tag color-d1 lt-sp53 mg-b24">
-                Full stack web developer
+                Welcome aboard !
               </div>
-              <h1 className="cd-headline clip is-full-width title color-d2 mg-b31">
-                <span>Hello, </span>
+              <h1
+                style={{ fontSize: '45px' }}
+                className="cd-headline clip is-full-width title color-d2 mg-b31"
+              >
+                <span>Hello! &nbsp;</span>
+
                 <span className="cd-words-wrapper color-d6">
-                  <b className="is-visible"> I’m Hani !</b>
-                  <b style={{ fontSize: "57px" }}>Viral Ventures Media Owner</b>
-                  <b style={{ fontSize: "56px" }}>Automation & SMMA Agency</b>
-                  <b style={{ fontSize: "56px" }}>a Web developer</b>
-                  <b style={{ fontSize: "56px" }}>I also freelance</b>
-                  <b style={{ fontSize: "65px" }}>I'm trilingual as well !</b>
-                  <b style={{ fontSize: "65px" }}>Reach out to me </b>
+                  <b style={{ fontSize: '45px' }} className="is-visible">
+                    {' '}
+                    My name is Hani ISMAIL
+                  </b>
+                  <b style={{ fontSize: '45px' }}> I'm a web developer </b>
+                  <b style={{ fontSize: '45px' }}>I make app architectures</b>
+                  <b style={{ fontSize: '45px' }}>
+                    I also have my share of Devops
+                  </b>
+                  <b style={{ fontSize: '45px' }}>
+                    I'm a former part time translator btw
+                  </b>
+                  <b style={{ fontSize: '45px' }}>Reach out to me </b>
                 </span>
               </h1>
               <p className="lt-sp02 mg-b51">
-                Hi, i m Hani, full stack web developer with 2 years
-                <br />
-                of experience.
+                Web Developer Tunisia, Major in software engineering and holder
+                of an early work access scholarship
               </p>
             </div>
             <div
@@ -55,7 +64,6 @@ class Banner extends Component {
             ></div>
           </div>
         </div>
-        ¸
       </section>
     );
   }

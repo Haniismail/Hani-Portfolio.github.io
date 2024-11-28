@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 class Footer extends Component {
   render() {
     return (
@@ -52,9 +52,7 @@ class Footer extends Component {
             <div className="container">
               <div className="row">
                 <div className="col-lg-4">
-                  <div className="copyright lt-sp02">
-                    © Built proudly in 2023 (a lot of coffee included)
-                  </div>
+                  <div className="copyright lt-sp02">© 2025</div>
                 </div>
                 <div className="col-lg-6"></div>
                 <div className="col-lg-2">

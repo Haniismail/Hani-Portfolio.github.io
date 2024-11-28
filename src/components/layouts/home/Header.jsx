@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import links from "../links";
-import menus from "../menus";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import links from '../links';
+import menus from '../menus';
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -12,23 +12,6 @@ class Header extends Component {
       <header id="header" className="header header-style3 has-menu-model">
         <div className="container">
           <div className="flex-header d-flex justify-content-between align-items-center">
-            <div id="logo" className="logo">
-              <Link
-                to="/"
-                onClick={() => {
-                  window.location.href = "/";
-                }}
-                title="Logo"
-              >
-                <img
-                  src="images/logo/01.png"
-                  alt="images"
-                  data-width={122}
-                  data-height={34}
-                  data-retina="images/logo/01@2x.png"
-                />
-              </Link>
-            </div>
             <div dir="rtl" className="btn-menu mobile-header__menu-button">
               <div className="line line-1" />
               <div className="line line-2" />
@@ -54,7 +37,7 @@ class Header extends Component {
                               onClick={() => {
                                 window.location.href = data.tolink;
                               }}
-                              className={data.id === 3 ? "active" : ""}
+                              className={data.id === 3 ? 'active' : ''}
                             >
                               {data.namelink}
                             </Link>

@@ -47,7 +47,7 @@ class Specilizing extends Component {
                 data-wow-delay="0.5s"
               >
                 <h2 className="title-section  mg-b44 text-center">
-                  SPECILIAZING IN
+                  Hard Skills
                 </h2>
               </div>
               <div
@@ -70,54 +70,6 @@ class Specilizing extends Component {
                     </div>
                   </div>
                 ))}
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="get-project s3 position-relative">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-6 col-12">
-                <div
-                  className="featured-post animate-element wow delay5 fadeZooming"
-                  data-wow-delay="0.5s"
-                >
-                  <img src="images/section/38.png" alt="images" />
-                </div>
-              </div>
-              <div className="col-lg-6 col-12">
-                <div
-                  className="content-inner animate-element wow delay5 fadeInDown"
-                  data-wow-delay="0.5s"
-                >
-                  <h2 className="title mg-b14 text-white">Say Hello!</h2>
-                  <div className="site-list has-border">
-                    <a
-                      href="https://www.linkedin.com/in/hanismail/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="bg-s1"
-                    >
-                      <i className="fa fa-linkedin" aria-hidden="true" />
-                    </a>
-                    <a
-                      href="https://github.com/Haniismail/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="bg-s2"
-                    >
-                      <i className="fa fa-github" aria-hidden="true" />
-                    </a>
-                    <a
-                      href="https://medium.com/@haniismail/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="bg-s3"
-                    >
-                      <span className="fa fa-medium" />
-                    </a>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

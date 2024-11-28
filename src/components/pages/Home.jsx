@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   About,
   Banner,
@@ -7,8 +7,8 @@ import {
   Footer,
   Header,
   Specilizing,
-} from "../layouts/home/index";
-import  Testimonial  from "../layouts/home/Testimonial";
+} from '../layouts/home/index';
+import Testimonial from '../layouts/home/Testimonial';
 class Home extends Component {
   render() {
     return (
@@ -24,7 +24,7 @@ class Home extends Component {
             <Specilizing />
             <Education />
             <CaseStudy />
-            <Testimonial />
+            {/* <Testimonial /> */}
             <Footer />
           </div>
         </div>
