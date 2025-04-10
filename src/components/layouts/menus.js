@@ -6,18 +6,28 @@ const menus = [
   },
   {
     id: 2,
-    tomenu: '#services',
+    tomenu: '#skills',
     namemenu: 'Skills',
   },
   {
     id: 3,
-    tomenu: '#portfolio',
+    tomenu: '#projects',
     namemenu: 'Projects',
   },
   {
+    id: 4,
+    tomenu: '#testimonials',
+    namemenu: 'Testimonials',
+  },
+  {
     id: 5,
-    tomenu: '#resume',
-    namemenu: 'Resume',
+    tomenu: '#certificates',
+    namemenu: 'Certificates',
+  },
+  {
+    id: 6,
+    tomenu: '#contact',
+    namemenu: 'Contact',
   },
 ];
 

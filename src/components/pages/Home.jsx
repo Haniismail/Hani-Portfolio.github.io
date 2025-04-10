@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import {
   About,
   Banner,
-  CaseStudy,
   Education,
   Footer,
   Header,
-  Specilizing,
+  Skills,
+  ProjectTimeline,
+  Certificates,
+  Testimonials,
+  CallToAction,
+  CareerProgression,
 } from '../layouts/home/index';
-import Testimonial from '../layouts/home/Testimonial';
 class Home extends Component {
   render() {
     return (
@@ -21,10 +24,13 @@ class Home extends Component {
           <div className="homepage-personal">
             <Banner />
             <About />
-            <Specilizing />
+            <Skills />
+            <ProjectTimeline />
+            <CareerProgression />
+            <Testimonials />
             <Education />
-            <CaseStudy />
-            {/* <Testimonial /> */}
+            <Certificates />
+            <CallToAction />
             <Footer />
           </div>
         </div>

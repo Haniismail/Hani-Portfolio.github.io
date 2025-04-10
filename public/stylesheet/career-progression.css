@@ -1,0 +1,247 @@
+/* Career Progression Styles
+-------------------------------------------------------------- */
+.career-progression-section {
+    padding: 100px 0;
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+}
+
+.career-progression-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(98, 127, 255, 0.05) 0%, rgba(98, 127, 255, 0) 70%);
+    border-radius: 50%;
+}
+
+.career-progression-section::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(98, 127, 255, 0.05) 0%, rgba(98, 127, 255, 0) 70%);
+    border-radius: 50%;
+}
+
+.career-intro {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.career-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: linear-gradient(to bottom, #627fff, #8c9eff);
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.career-step {
+    position: relative;
+    margin-bottom: 80px;
+    width: 50%;
+    padding: 0 40px;
+}
+
+.career-step:last-child {
+    margin-bottom: 0;
+}
+
+.career-step.left {
+    left: 0;
+}
+
+.career-step.right {
+    left: 50%;
+}
+
+.career-icon {
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #627fff 0%, #8c9eff 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+    z-index: 2;
+    box-shadow: 0 5px 15px rgba(98, 127, 255, 0.3);
+}
+
+.career-step.left .career-icon {
+    right: -30px;
+}
+
+.career-step.right .career-icon {
+    left: -30px;
+}
+
+.career-content {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.career-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.career-step.left .career-content::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    box-shadow: 5px -5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.career-step.right .career-content::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.career-header {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.career-role {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.career-company-period {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.career-company {
+    font-size: 16px;
+    font-weight: 500;
+    color: #627fff;
+}
+
+.career-period {
+    font-size: 14px;
+    color: #888;
+    background-color: rgba(98, 127, 255, 0.1);
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.career-description {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.career-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.career-skill {
+    font-size: 13px;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 5px 12px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.career-skill:hover {
+    background-color: #627fff;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .career-progression-section {
+        padding: 70px 0;
+    }
+    
+    .career-intro {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .timeline-line {
+        left: 30px;
+    }
+    
+    .career-step {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 15px;
+    }
+    
+    .career-step.left, .career-step.right {
+        left: 0;
+    }
+    
+    .career-step.left .career-icon, .career-step.right .career-icon {
+        left: 0;
+    }
+    
+    .career-step.left .career-content::after, .career-step.right .career-content::after {
+        left: -10px;
+        right: auto;
+        box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    .career-company-period {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .career-period {
+        margin-top: 5px;
+    }
+}
