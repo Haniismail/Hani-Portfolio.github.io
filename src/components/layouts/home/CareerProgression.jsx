@@ -66,13 +66,15 @@ class CareerProgression extends Component {
                 <div className="flat-title t2 text-center">
                   <h4 className="sub-title mg-b22">Professional Development</h4>
                   <h2 className="title-section color-d12 mg-b41">
-                    My Career Evolution
+                    My Recent Roles
                   </h2>
                   <p className="career-intro">
-                    Full stack web developer at Softylines - Architected, Built
-                    and Maintained several projects with various clients in
-                    optimal timing. Upon promotion, I led a team of developers
-                    for teamwork and advisory purposes.
+                    Over the past few years, I've held several key positions
+                    that showcase my versatility as a developer. From
+                    specialized backend development to technical leadership and
+                    full-stack implementation, each role has expanded my
+                    expertise and allowed me to deliver impactful solutions for
+                    diverse client needs.
                   </p>
                 </div>
               </div>
