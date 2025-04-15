@@ -101,12 +101,7 @@ class Header extends Component {
                   className="download-cv-btn"
                   onClick={(e) => {
                     e.preventDefault();
-                    const resumeLink = document.createElement('a');
-                    resumeLink.href = '/resume.pdf';
-                    resumeLink.download = 'Hani_Ismail_Resume.pdf';
-                    document.body.appendChild(resumeLink);
-                    resumeLink.click();
-                    document.body.removeChild(resumeLink);
+                    window.open('/resume.pdf', '_blank');
                   }}
                 >
                   <i className="fa fa-download"></i>

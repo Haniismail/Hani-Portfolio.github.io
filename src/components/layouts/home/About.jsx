@@ -21,8 +21,9 @@ class About extends Component {
                   </h2>
                   <div className="description">
                     <p className="lt-sp01">
-                      Variant roles such as backend development, front end
-                      development, database management and team lead roles.
+                      Experienced in various roles including backend
+                      development, frontend development, database management,
+                      and team leadership positions.
                     </p>
                     <p className="lt-sp01">
                       Certified in Amazon AWS Developer and Practitioner

@@ -36,8 +36,9 @@ class Banner extends Component {
                 </span>
               </h1>
               <p className="lt-sp02 mg-b51">
-                Web Developer Tunisia, Major in software engineering and holder
-                of an early work access scholarship
+                Tech Lead and Full-stack Developer based in Tunisia with 4 years
+                of hands-on web development experience in backend, frontend, and
+                team leadership roles.
               </p>
             </div>
             <div

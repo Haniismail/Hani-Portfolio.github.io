@@ -1,0 +1,81 @@
+/* Custom Cursor Styles
+-------------------------------------------------------------- */
+body {
+  cursor: none;
+}
+
+.cursor-dot,
+.cursor-dot-outline {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #627fff;
+}
+
+.cursor-dot-outline {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(98, 127, 255, 0.2);
+}
+
+.cursor-hover {
+  transform: translate(-50%, -50%) scale(1.5);
+  background-color: rgba(98, 127, 255, 0.1);
+}
+
+.cursor-dot.cursor-hover {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(98, 127, 255, 0.8);
+}
+
+/* Special cursor states */
+.cursor-project {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(98, 127, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cursor-project::after {
+  content: 'View';
+  position: absolute;
+}
+
+.cursor-link {
+  transform: translate(-50%, -50%) scale(1.8);
+  background-color: rgba(98, 127, 255, 0.1);
+}
+
+.cursor-link .cursor-dot {
+  background-color: #fff;
+}
+
+/* Hide cursor on mobile devices */
+@media (max-width: 991px) {
+  .cursor-dot,
+  .cursor-dot-outline {
+    display: none;
+  }
+  
+  body {
+    cursor: auto;
+  }
+}

@@ -18,9 +18,10 @@ class Footer extends Component {
                   </span>
                 </div>
                 <p className="footer-description">
-                  Full-stack developer with 4 years of experience in creating
-                  responsive and scalable web applications. Specialized in
-                  React, Node.js, and AWS cloud services.
+                  Tech Lead and Full-stack developer with 4 years of hands-on
+                  web development. Specialized in backend development, front-end
+                  development, database management and team leadership.
+                  Certified in Amazon AWS Developer and Practitioner.
                 </p>
                 <div className="footer-social-icons">
                   <a
@@ -58,9 +59,24 @@ class Footer extends Component {
                 <ul className="footer-menu">
                   {menus.map((menu) => (
                     <li key={menu.id} className="footer-menu-item">
-                      <Link to={menu.tomenu} className="footer-menu-link">
+                      <a
+                        href={menu.tomenu}
+                        className="footer-menu-link"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          const targetSection = document.querySelector(
+                            menu.tomenu
+                          );
+                          if (targetSection) {
+                            window.scrollTo({
+                              top: targetSection.offsetTop - 100,
+                              behavior: 'smooth',
+                            });
+                          }
+                        }}
+                      >
                         <i className="fa fa-chevron-right"></i> {menu.namemenu}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
