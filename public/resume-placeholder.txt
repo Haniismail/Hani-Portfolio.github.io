@@ -1,0 +1,3 @@
+This is a placeholder for the resume.pdf file.
+
+Please upload your actual resume.pdf file to the public directory to enable the "Download CV" functionality.

@@ -101,7 +101,22 @@ class Header extends Component {
                   className="download-cv-btn"
                   onClick={(e) => {
                     e.preventDefault();
-                    window.open('/resume.pdf', '_blank');
+                    // Try to fetch the resume file to check if it exists
+                    fetch('/resume.pdf')
+                      .then((response) => {
+                        if (response.ok) {
+                          window.open('/resume.pdf', '_blank');
+                        } else {
+                          alert(
+                            'Resume file not available. Please upload your resume.pdf file to the public directory.'
+                          );
+                        }
+                      })
+                      .catch(() => {
+                        alert(
+                          'Resume file not available. Please upload your resume.pdf file to the public directory.'
+                        );
+                      });
                   }}
                 >
                   <i className="fa fa-download"></i>
