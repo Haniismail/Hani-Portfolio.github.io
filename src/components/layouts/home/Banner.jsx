@@ -17,29 +17,32 @@ class Banner extends Component {
                 style={{ fontSize: '45px' }}
                 className="cd-headline clip is-full-width title color-d2 mg-b31"
               >
-                <span>Hello! &nbsp;</span>
+                <span>Bonjour/Hello! &nbsp;</span>
 
                 <span className="cd-words-wrapper color-d6">
                   <b style={{ fontSize: '45px' }} className="is-visible">
                     {' '}
                     My name is Hani ISMAIL
                   </b>
-                  <b style={{ fontSize: '45px' }}> I'm a web developer </b>
-                  <b style={{ fontSize: '45px' }}>I make app architectures</b>
+                  <b style={{ fontSize: '45px' }}> Full-Stack web Developer</b>
+                  <b style={{ fontSize: '45px' }}>AWS Solutions Architect</b>
                   <b style={{ fontSize: '45px' }}>
-                    I also have my share of Devops
+                    I have global client experience
                   </b>
                   <b style={{ fontSize: '45px' }}>
-                    I'm a former part time translator btw
+                    Fluent in English and French
                   </b>
-                  <b style={{ fontSize: '45px' }}>Reach out to me </b>
+                  <b style={{ fontSize: '45px' }}>I love coding efficiently</b>
+                  <b style={{ fontSize: '45px' }}>
+                    and collaborating with teams
+                  </b>
+                  <b style={{ fontSize: '45px' }}>Reach out to me ! </b>
                 </span>
               </h1>
               <p className="lt-sp02 mg-b51">
                 Tech Lead and Full-stack Developer (backend heavy) based in
-                Tunisia with 4 years of hands-on web development experience
-                specializing in modeling backend architecture as an AWS
-                Solutions Architect Associate certificate holder.
+                Tunisia with 4 years of hands-on web development with experience
+                in modeling backend architecture as an AWS Solutions Architect{' '}
               </p>
             </div>
             <div
