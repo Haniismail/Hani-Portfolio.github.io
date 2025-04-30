@@ -21,12 +21,14 @@ class About extends Component {
                   </h2>
                   <div className="description">
                     <p className="lt-sp01">
-                      Variant roles such as backend development, front end
-                      development, database management and team lead roles.
+                      Specialized in backend development with expertise in
+                      designing and implementing scalable architectures. Strong
+                      focus on AWS cloud solutions and full-stack development
+                      with a backend emphasis.
                     </p>
                     <p className="lt-sp01">
-                      Certified in Amazon AWS Developer and Practitioner
-                      alongside C1 levels in : IELTS, EF SET and DELF
+                      AWS Solutions Architect Associate certified with extensive
+                      experience in cloud architecture and backend system design
                     </p>
                     <div className="about-buttons mt-4">
                       <a
@@ -34,7 +36,22 @@ class About extends Component {
                         className="btn-about"
                         onClick={(e) => {
                           e.preventDefault();
-                          window.open('/resume.pdf', '_blank');
+                          // Try to fetch the resume file to check if it exists
+                          fetch('/resume.pdf')
+                            .then((response) => {
+                              if (response.ok) {
+                                window.open('/resume.pdf', '_blank');
+                              } else {
+                                alert(
+                                  'Resume file not available. Please upload your resume.pdf file to the public directory.'
+                                );
+                              }
+                            })
+                            .catch(() => {
+                              alert(
+                                'Resume file not available. Please upload your resume.pdf file to the public directory.'
+                              );
+                            });
                         }}
                       >
                         <i className="fa fa-download mr-2"></i> Download CV

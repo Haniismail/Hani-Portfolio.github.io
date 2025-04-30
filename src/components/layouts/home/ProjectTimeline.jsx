@@ -7,6 +7,28 @@ class ProjectTimeline extends Component {
       projects: [
         {
           id: 1,
+          title: 'Linkefoot',
+          date: 'Sep 2021 - Nov 2021',
+          description:
+            'A social platform for football enthusiasts to connect, organize matches, and share their passion for the sport. Worked as a Tech Lead on this project.',
+          technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.IO'],
+          link: 'https://github.com/Haniismail',
+          image: 'images/section/linkefoot.jpeg',
+          position: 'left',
+        },
+        {
+          id: 2,
+          title: 'Proximabel',
+          date: 'Aug 2022 - Dec 2022',
+          description:
+            'A web platform connecting users with local service providers, featuring real-time booking and service management. Served as Tech Lead for this project.',
+          technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Redux'],
+          link: 'https://proximabel.com',
+          image: 'images/section/proximabel.png',
+          position: 'right',
+        },
+        {
+          id: 3,
           title: 'Taki Kids Backend',
           date: 'Jan 2023 - Present',
           description:
@@ -17,18 +39,7 @@ class ProjectTimeline extends Component {
           position: 'left',
         },
         {
-          id: 2,
-          title: 'Proximabel',
-          date: 'Aug 2022 - Dec 2022',
-          description:
-            'A web platform connecting users with local service providers, featuring real-time booking and service management.',
-          technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Redux'],
-          link: 'https://proximabel.com',
-          image: 'images/section/proximabel.png',
-          position: 'right',
-        },
-        {
-          id: 3,
+          id: 4,
           title: 'Viral Ventures Media',
           date: 'May 2022 - Jul 2022',
           description:
@@ -36,10 +47,10 @@ class ProjectTimeline extends Component {
           technologies: ['React', 'Next.js', 'CSS3', 'Bootstrap', 'JavaScript'],
           link: 'https://viralventuresmedia.vercel.app/',
           image: 'images/section/vvm.jpeg',
-          position: 'left',
+          position: 'right',
         },
         {
-          id: 4,
+          id: 5,
           title: 'Student Help',
           date: 'Feb 2022 - Apr 2022',
           description:
@@ -53,19 +64,7 @@ class ProjectTimeline extends Component {
           ],
           link: 'https://play.google.com/store/apps/details?id=com.softylines.studenthelp&pcampaignid=web_share',
           image: 'images/section/studenthelp.jpg',
-          position: 'right',
-        },
-
-        {
-          id: 6,
-          title: 'Linkefoot',
-          date: 'Sep 2021 - Nov 2021',
-          description:
-            'A social platform for football enthusiasts to connect, organize matches, and share their passion for the sport.',
-          technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.IO'],
-          link: 'https://github.com/Haniismail',
-          image: 'images/section/linkefoot.jpeg',
-          position: 'right',
+          position: 'left',
         },
       ],
     };

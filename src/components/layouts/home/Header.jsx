@@ -101,12 +101,22 @@ class Header extends Component {
                   className="download-cv-btn"
                   onClick={(e) => {
                     e.preventDefault();
-                    const resumeLink = document.createElement('a');
-                    resumeLink.href = '/resume.pdf';
-                    resumeLink.download = 'Hani_Ismail_Resume.pdf';
-                    document.body.appendChild(resumeLink);
-                    resumeLink.click();
-                    document.body.removeChild(resumeLink);
+                    // Try to fetch the resume file to check if it exists
+                    fetch('/resume.pdf')
+                      .then((response) => {
+                        if (response.ok) {
+                          window.open('/resume.pdf', '_blank');
+                        } else {
+                          alert(
+                            'Resume file not available. Please upload your resume.pdf file to the public directory.'
+                          );
+                        }
+                      })
+                      .catch(() => {
+                        alert(
+                          'Resume file not available. Please upload your resume.pdf file to the public directory.'
+                        );
+                      });
                   }}
                 >
                   <i className="fa fa-download"></i>
