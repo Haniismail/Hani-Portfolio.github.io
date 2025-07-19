@@ -6,20 +6,45 @@ class ProjectTimeline extends Component {
     this.state = {
       projects: [
         {
+          id: 0,
+          title: 'MyGreenWork',
+          date: 'Freelance Project',
+          description:
+            'A platform for canadian companies to organize and monitor their machines and recycle their debris',
+          technologies: [
+            'React',
+            'Node.js',
+            'AWS',
+            'Express',
+            'MongoDB',
+            'Replit',
+          ],
+          link: 'https://mygreenwork.com/',
+          image: 'images/section/mygreenwork.png',
+          position: 'right',
+        },
+        {
           id: 1,
           title: 'Linkefoot',
-          date: 'Sep 2021 - Nov 2021',
+          date: 'October 2023 - July 2025',
           description:
             'A social platform for football enthusiasts to connect, organize matches, and share their passion for the sport. Worked as a Tech Lead on this project.',
-          technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.IO'],
-          link: 'https://github.com/Haniismail',
+          technologies: [
+            'React',
+            'Node.js',
+            'AWS',
+            'Express',
+            'MongoDB',
+            'Socket.IO',
+          ],
+          link: 'https://linkefoot.com/',
           image: 'images/section/linkefoot.jpeg',
           position: 'left',
         },
         {
           id: 2,
           title: 'Proximabel',
-          date: 'Aug 2022 - Dec 2022',
+          date: 'May 2023 - October 2023',
           description:
             'A web platform connecting users with local service providers, featuring real-time booking and service management. Served as Tech Lead for this project.',
           technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Redux'],
@@ -30,7 +55,7 @@ class ProjectTimeline extends Component {
         {
           id: 3,
           title: 'Taki Kids Backend',
-          date: 'Jan 2023 - Present',
+          date: 'Jan 2022 - Aug 2022',
           description:
             'Backend development for an educational mobile app for children, featuring interactive learning activities and games.',
           technologies: ['Node.js', 'Express', 'MongoDB', 'AWS', 'Socket.IO'],
@@ -41,7 +66,7 @@ class ProjectTimeline extends Component {
         {
           id: 4,
           title: 'Viral Ventures Media',
-          date: 'May 2022 - Jul 2022',
+          date: 'Side Project',
           description:
             'A digital marketing agency website showcasing services, portfolio, and client testimonials with modern design.',
           technologies: ['React', 'Next.js', 'CSS3', 'Bootstrap', 'JavaScript'],
@@ -52,7 +77,7 @@ class ProjectTimeline extends Component {
         {
           id: 5,
           title: 'Student Help',
-          date: 'Feb 2022 - Apr 2022',
+          date: 'Aug 2022 - Dec 2022',
           description:
             'A mobile application designed to help students with academic resources, study materials, and collaboration tools.',
           technologies: [
