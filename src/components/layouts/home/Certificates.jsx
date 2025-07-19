@@ -9,27 +9,30 @@ class Certificates extends Component {
           id: 1,
           title: 'AWS Solutions Architect',
           issuer: 'Amazon Web Services',
-          date: 'December 2022',
-          description: 'Certified in designing distributed systems on AWS, demonstrating expertise in AWS architecture best practices.',
-          icon: 'fa-cloud'
+          date: 'September 2025',
+          description:
+            'Certified in designing distributed systems on AWS, demonstrating expertise in AWS architecture best practices.',
+          icon: 'fa-cloud',
         },
         {
           id: 2,
-          title: 'TEF (Test d\'Évaluation de Français)',
-          issuer: 'Chamber of Commerce and Industry of Paris',
-          date: 'March 2021',
-          description: 'Achieved C1 level certification in French language proficiency, demonstrating advanced communication skills.',
-          icon: 'fa-language'
+          title: "TEF (Test d'Évaluation de Français)",
+          issuer: 'Paris Île-de-France',
+          date: 'October 2024',
+          description:
+            'Achieved C1 level certification in French language proficiency, demonstrating advanced communication skills.',
+          icon: 'fa-language',
         },
         {
           id: 3,
           title: 'IELTS (International English Language Testing System)',
           issuer: 'British Council',
-          date: 'September 2020',
-          description: 'Achieved C1 level certification in English language proficiency, demonstrating advanced communication skills.',
-          icon: 'fa-language'
-        }
-      ]
+          date: 'September 2025',
+          description:
+            'Achieved C1 level certification in English language proficiency, demonstrating advanced communication skills.',
+          icon: 'fa-language',
+        },
+      ],
     };
   }
 
@@ -38,7 +41,10 @@ class Certificates extends Component {
 
     return (
       <div className="tf-modal-content">
-        <section className="certificates-section position-relative" id="certificates">
+        <section
+          className="certificates-section position-relative"
+          id="certificates"
+        >
           <div className="container">
             <div className="row">
               <div className="col-md-12 animate-element wow delay5 fadeInDown">
@@ -60,9 +66,13 @@ class Certificates extends Component {
                     </div>
                     <div className="certificate-content">
                       <h3 className="certificate-title">{certificate.title}</h3>
-                      <div className="certificate-issuer">{certificate.issuer}</div>
+                      <div className="certificate-issuer">
+                        {certificate.issuer}
+                      </div>
                       <div className="certificate-date">{certificate.date}</div>
-                      <p className="certificate-description">{certificate.description}</p>
+                      <p className="certificate-description">
+                        {certificate.description}
+                      </p>
                     </div>
                   </div>
                 </div>
