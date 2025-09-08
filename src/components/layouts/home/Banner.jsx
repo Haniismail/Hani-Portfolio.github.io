@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HaniCV from '../../../../public/resume.pdf';
+import HaniCV from '../home/documents/resume.pdf';
 class Banner extends Component {
   render() {
     return (
