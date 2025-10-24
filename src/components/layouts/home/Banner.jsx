@@ -24,10 +24,10 @@ class Banner extends Component {
                     {' '}
                     My name is Hani ISMAIL
                   </b>
-                  <b style={{ fontSize: '45px' }}> Full-Stack web Developer</b>
+                  <b style={{ fontSize: '45px' }}> Full-Stack Web Developer</b>
                   <b style={{ fontSize: '45px' }}>AWS Solutions Architect</b>
-                  <b style={{ fontSize: '45px' }}>
-                    I have global client experience
+                  <b style={{ fontSize: '40px' }}>
+                    I LOVE shipping Impactful Projects
                   </b>
                   <b style={{ fontSize: '45px' }}>
                     Fluent in English and French
@@ -40,9 +40,7 @@ class Banner extends Component {
                 </span>
               </h1>
               <p className="lt-sp02 mg-b51">
-                Tech Lead and Full-stack Developer (backend heavy) based in
-                Tunisia with 4 years of hands-on web development with experience
-                in modeling backend architecture as an AWS Solutions Architect{' '}
+              Tech Lead, Full-Stack Developer and Certified Solutions Architect with 5 years of hands-on web development. Utilizing the latest technologies to build scalable and efficient web applications alongside cloud solutions such as Amazon Web Services.{' '}
               </p>
             </div>
             <div

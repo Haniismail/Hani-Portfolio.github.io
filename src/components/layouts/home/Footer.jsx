@@ -18,10 +18,8 @@ class Footer extends Component {
                   </span>
                 </div>
                 <p className="footer-description">
-                  Tech Lead and Full-stack developer (backend heavy) with 4
-                  years of hands-on web development. Specialized in modeling
-                  backend architecture and AWS cloud solutions as an AWS
-                  Solutions Architect Associate certificate holder.
+                  Tech Lead, Full-Stack Developer and Certified Solutions Architect with 5
+                  years of hands-on web development. Utilizing the latest technologies to build scalable and efficient web applications alongside cloud solutions such as Amazon Web Services.
                 </p>
                 <div className="footer-social-icons">
                   <a

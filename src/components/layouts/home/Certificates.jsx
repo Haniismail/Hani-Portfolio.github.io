@@ -9,9 +9,9 @@ class Certificates extends Component {
           id: 1,
           title: 'AWS Solutions Architect',
           issuer: 'Amazon Web Services',
-          date: 'September 2025',
+          date: 'October 2025',
           description:
-            'Certified in designing distributed systems on AWS, demonstrating expertise in AWS architecture best practices.',
+            'Certified in designing cloud systems on AWS, demonstrating expertise in AWS architecture best practices.',
           icon: 'fa-cloud',
         },
         {
@@ -27,7 +27,7 @@ class Certificates extends Component {
           id: 3,
           title: 'IELTS (International English Language Testing System)',
           issuer: 'British Council',
-          date: 'September 2025',
+          date: 'May 2025',
           description:
             'Achieved C1 level certification in English language proficiency, demonstrating advanced communication skills.',
           icon: 'fa-language',

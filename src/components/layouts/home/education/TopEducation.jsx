@@ -14,29 +14,22 @@ class TopEducation extends Component {
         },
         {
           id: 2,
-          classname: 'experience-box experience-box-line t3',
+          classname: 'experience-box t3',
           datawow: '0.5s',
-          year: '2021-2025',
+          year: '2021-2024',
           title: 'Software Engineering Degree',
         },
-        {
-          id: 3,
-          classname: 'experience-box t3',
-          datawow: '0.7s',
-          year: '2021-2025',
-          title: 'Work-Study Program',
-          text: 'Upon excellent acedemic results I was selected to participate in a state sponsored 4 year work-study program',
-        },
+        
       ],
       contentbot: [
         {
           id: 1,
           classname: 'experience-box experience-box-line t3',
           datawow: '0.8s',
-          year: '2018 - 2019',
-          title: 'Freelance Translator',
-          office: 'OneHourTranslation.com',
-          text: 'Starting role was to deliver translations from and to (Arabic, English and French), upon promotion I got to rate the translations of other translators',
+          year: '2020 - 2021',
+          title: 'Freelance Full Stack Developer',
+          office: 'Saudi Arabia',
+          text: 'Initiated my career in web development with a year long journey learning the abc s and applying the best practices of the MERN stack while contributing to Internal proojects and production level SAAS',
         },
         {
           id: 2,

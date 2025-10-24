@@ -17,7 +17,7 @@ class About extends Component {
                 <div className="flat-title t2">
                   <h4 className="sub-title mg-b22">About Me</h4>
                   <h2 className="title-section color-d12 mg-b41">
-                    4 years of hands-on web development
+                    5 years of hands-on web development
                   </h2>
                   <div className="description">
                     <p className="lt-sp01">
