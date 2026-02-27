@@ -1,14 +1,17 @@
 import { useState, useRef, useEffect } from "react";
-import { MessageCircle, X, Send } from "lucide-react";
+import { MessageCircle, X, Send, Loader2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { portfolio } from "../data/portfolio";
 
+type Message = { from: "bot" | "user"; text: string };
+
 const Chatbot = () => {
   const [open, setOpen] = useState(false);
-  const [messages, setMessages] = useState<{ from: "bot" | "user"; text: string }[]>([
-    { from: "bot", text: "Hi! 👋 I'm Hani's assistant. Pick a question below or type your own." },
+  const [messages, setMessages] = useState<Message[]>([
+    { from: "bot", text: "Hi! 👋 I'm Hani's assistant powered by Gemini AI. Ask me anything about Hani or pick a question below." },
   ]);
   const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
   const [askedQuestions, setAskedQuestions] = useState<Set<string>>(new Set());
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -16,22 +19,50 @@ const Chatbot = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  const handleQuestion = (q: string, a: string) => {
+  // Build Gemini-format history from messages (excluding the initial bot greeting)
+  const buildHistory = (msgs: Message[]) =>
+    msgs.slice(1).map((m) => ({
+      role: m.from === "user" ? "user" : "model",
+      parts: [{ text: m.text }],
+    }));
+
+  const sendToGemini = async (userText: string) => {
+    const userMsg: Message = { from: "user", text: userText };
+    const updatedMessages = [...messages, userMsg];
+    setMessages(updatedMessages);
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: buildHistory(updatedMessages) }),
+      });
+      const data = await res.json();
+      setMessages((prev) => [
+        ...prev,
+        { from: "bot", text: data.reply ?? "Sorry, I couldn't get a response. Please try again." },
+      ]);
+    } catch {
+      setMessages((prev) => [
+        ...prev,
+        { from: "bot", text: "Something went wrong. Please try again later." },
+      ]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleQuestion = (q: string) => {
     setAskedQuestions((prev) => new Set(prev).add(q));
-    setMessages((prev) => [...prev, { from: "user", text: q }, { from: "bot", text: a }]);
+    sendToGemini(q);
   };
 
   const handleCustom = () => {
-    if (!input.trim()) return;
-    setMessages((prev) => [
-      ...prev,
-      { from: "user", text: input },
-      {
-        from: "bot",
-        text: `For custom questions, please reach out directly at ${portfolio.email} 📬`,
-      },
-    ]);
+    if (!input.trim() || loading) return;
+    const text = input.trim();
     setInput("");
+    sendToGemini(text);
   };
 
   return (
@@ -98,6 +129,14 @@ const Chatbot = () => {
                   </span>
                 </div>
               ))}
+              {loading && (
+                <div className="flex justify-start">
+                  <span className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-2xl rounded-bl-sm bg-muted text-muted-foreground text-sm">
+                    <Loader2 size={13} className="animate-spin" />
+                    Thinking…
+                  </span>
+                </div>
+              )}
               <div ref={messagesEndRef} />
             </div>
 
@@ -107,7 +146,7 @@ const Chatbot = () => {
               {portfolio.chatbot.questions.filter((qa) => !askedQuestions.has(qa.q)).map((qa, i) => (
                 <button
                   key={i}
-                  onClick={() => handleQuestion(qa.q, qa.a)}
+                  onClick={() => handleQuestion(qa.q)}
                   className="block w-full text-left text-xs px-3 py-2 rounded-xl bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
                 >
                   {qa.q}
@@ -121,14 +160,16 @@ const Chatbot = () => {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleCustom()}
-                placeholder="Type a message..."
-                className="flex-1 text-sm px-3.5 py-2 rounded-xl bg-muted text-foreground placeholder:text-muted-foreground outline-none focus:ring-2 focus:ring-primary/40"
+                placeholder="Ask me anything…"
+                disabled={loading}
+                className="flex-1 text-sm px-3.5 py-2 rounded-xl bg-muted text-foreground placeholder:text-muted-foreground outline-none focus:ring-2 focus:ring-primary/40 disabled:opacity-50"
               />
               <button
                 onClick={handleCustom}
-                className="p-2.5 rounded-xl bg-primary text-primary-foreground hover:opacity-90 transition-opacity shrink-0"
+                disabled={loading || !input.trim()}
+                className="p-2.5 rounded-xl bg-primary text-primary-foreground hover:opacity-90 transition-opacity shrink-0 disabled:opacity-40"
               >
-                <Send size={14} />
+                {loading ? <Loader2 size={14} className="animate-spin" /> : <Send size={14} />}
               </button>
             </div>
           </motion.div>

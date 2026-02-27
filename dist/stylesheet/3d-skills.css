@@ -1,0 +1,86 @@
+/* 3D Skills Visualization
+-------------------------------------------------------------- */
+.skills-3d-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin: 50px 0;
+  perspective: 1000px;
+}
+
+.skills-sphere {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  animation: rotate 30s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotateX(0) rotateY(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.skill-tag-3d {
+  position: absolute;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.skill-tag-3d:hover {
+  background: #627fff;
+  color: #fff;
+  box-shadow: 0 5px 20px rgba(98, 127, 255, 0.4);
+  transform: scale(1.1);
+}
+
+.skill-tag-3d.frontend {
+  background: linear-gradient(135deg, rgba(98, 127, 255, 0.9), rgba(140, 158, 255, 0.9));
+  color: white;
+}
+
+.skill-tag-3d.backend {
+  background: linear-gradient(135deg, rgba(162, 69, 251, 0.9), rgba(186, 104, 255, 0.9));
+  color: white;
+}
+
+.skill-tag-3d.database {
+  background: linear-gradient(135deg, rgba(251, 189, 65, 0.9), rgba(255, 213, 79, 0.9));
+  color: #333;
+}
+
+.skill-tag-3d.devops {
+  background: linear-gradient(135deg, rgba(79, 209, 197, 0.9), rgba(111, 230, 215, 0.9));
+  color: #333;
+}
+
+.skill-tag-3d.ai {
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.9), rgba(255, 145, 145, 0.9));
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .skills-3d-container {
+    height: 300px;
+  }
+  
+  .skill-tag-3d {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
