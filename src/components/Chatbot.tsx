@@ -1,25 +1,22 @@
 import { useState, useRef, useEffect } from "react";
 import { MessageCircle, X, Send, Loader2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { portfolio } from "../data/portfolio";
 
 type Message = { from: "bot" | "user"; text: string };
 
 const Chatbot = () => {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { from: "bot", text: "Hi! 👋 I'm Hani's assistant powered by Gemini AI. Ask me anything about Hani or pick a question below." },
+    { from: "bot", text: "Hi! 👋 I'm Hani's assistant powered by Gemini AI. Ask me anything about Hani." },
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const [askedQuestions, setAskedQuestions] = useState<Set<string>>(new Set());
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  // Build Gemini-format history from messages (excluding the initial bot greeting)
   const buildHistory = (msgs: Message[]) =>
     msgs.slice(1).map((m) => ({
       role: m.from === "user" ? "user" : "model",
@@ -51,11 +48,6 @@ const Chatbot = () => {
     } finally {
       setLoading(false);
     }
-  };
-
-  const handleQuestion = (q: string) => {
-    setAskedQuestions((prev) => new Set(prev).add(q));
-    sendToGemini(q);
   };
 
   const handleCustom = () => {
@@ -107,7 +99,7 @@ const Chatbot = () => {
               </div>
               <div>
                 <p className="font-semibold text-foreground text-sm leading-none">Hani's Assistant</p>
-                <p className="text-xs text-muted-foreground mt-0.5">Ask me anything</p>
+                <p className="text-xs text-muted-foreground mt-0.5">Powered by Gemini AI</p>
               </div>
             </div>
 
@@ -138,20 +130,6 @@ const Chatbot = () => {
                 </div>
               )}
               <div ref={messagesEndRef} />
-            </div>
-
-            {/* Quick questions */}
-            <div className="px-4 py-3 border-t border-border space-y-1.5 overflow-y-auto" style={{ maxHeight: "9rem" }}>
-              <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-medium mb-2">Suggested questions</p>
-              {portfolio.chatbot.questions.filter((qa) => !askedQuestions.has(qa.q)).map((qa, i) => (
-                <button
-                  key={i}
-                  onClick={() => handleQuestion(qa.q)}
-                  className="block w-full text-left text-xs px-3 py-2 rounded-xl bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
-                >
-                  {qa.q}
-                </button>
-              ))}
             </div>
 
             {/* Input */}

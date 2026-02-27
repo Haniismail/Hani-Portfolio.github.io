@@ -127,32 +127,4 @@ export const portfolio = {
     "TEF C1 – French Proficiency",
     "IELTS C1 – English Proficiency",
   ],
-  chatbot: {
-    questions: [
-      {
-        q: "What does Hani do?",
-        a: "Hani is a Tech Lead and Full-Stack Developer with 4+ years of experience. He specializes in building scalable web applications using React, Node.js, and AWS. He's currently freelancing for Montreal-based clients.",
-      },
-      {
-        q: "What are his skills?",
-        a: "Frontend: React, Next.js, TypeScript, Tailwind CSS. Backend: Node.js, Express, NestJS, GraphQL. Databases: MongoDB, MySQL, Redis. DevOps: AWS, Docker, Kubernetes, CI/CD.",
-      },
-      {
-        q: "What projects has he worked on?",
-        a: "Hani has built MyGreenWork, Linkefoot, Proximabel, Taki Kids, Viral Ventures Media, and Student Help — spanning social platforms, marketplaces, and educational tools.",
-      },
-      {
-        q: "Who has he worked with?",
-        a: "He's worked with Softylines as a Backend Developer and Tech Lead, and now consults independently for startups in Montreal, Canada.",
-      },
-      {
-        q: "What certifications does he have?",
-        a: "AWS Solutions Architect, TEF C1 (French), and IELTS C1 (English).",
-      },
-      {
-        q: "How can I contact him?",
-        a: "Email: emailofhaniismail@gmail.com | LinkedIn: linkedin.com/in/hanismail | GitHub: github.com/Haniismail",
-      },
-    ],
-  },
 };
