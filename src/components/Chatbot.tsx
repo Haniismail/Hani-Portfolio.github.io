@@ -19,8 +19,8 @@ const Chatbot = () => {
 
   const buildHistory = (msgs: Message[]) =>
     msgs.slice(1).map((m) => ({
-      role: m.from === "user" ? "user" : "model",
-      parts: [{ text: m.text }],
+      role: m.from === "user" ? "user" : "assistant",
+      content: m.text,
     }));
 
   const sendToGemini = async (userText: string) => {
@@ -38,7 +38,7 @@ const Chatbot = () => {
       const data = await res.json();
       setMessages((prev) => [
         ...prev,
-        { from: "bot", text: data.reply ?? "Sorry, I couldn't get a response. Please try again." },
+        { from: "bot", text: data.reply ?? `Error: ${data.error ?? "No response"} — ${JSON.stringify(data.raw ?? {})}` },
       ]);
     } catch {
       setMessages((prev) => [
