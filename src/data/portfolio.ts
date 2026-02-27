@@ -44,10 +44,12 @@ const en = {
     contactCta: "Get in Touch",
     footerBuilt: "Built with vibes and caffeine ☕",
     chatGreeting: "Ask me anything about Hani.",
-    chatTitle: "Ask Hani",
-    chatPowered: "I built this AI to help you get to know me better!",
+    chatTitle: "Jarvis",
+    chatPowered: "Text or voice chat with me !",
     chatPlaceholder: "Ask me anything…",
     chatThinking: "Thinking…",
+    chatListening: "Listening…",
+    chatSpeechError: "Voice not supported in this browser.",
     chatError: "Something went wrong. Please try again later.",
   },
   skills: [
@@ -226,6 +228,8 @@ const fr: typeof en = {
     chatPowered: "Propulsé par la caféine ☕",
     chatPlaceholder: "Posez-moi une question…",
     chatThinking: "Réflexion…",
+    chatListening: "Écoute…",
+    chatSpeechError: "Voix non supportée dans ce navigateur.",
     chatError: "Une erreur est survenue. Veuillez réessayer plus tard.",
   },
   skills: [
