@@ -42,10 +42,10 @@ const en = {
     contactDescription:
       "I'm currently available for freelance projects and consulting. Feel free to reach out if you have a project in mind.",
     contactCta: "Get in Touch",
-    footerBuilt: "Built with React & Tailwind CSS",
+    footerBuilt: "Built with vibes and caffeine ☕",
     chatGreeting: "Ask me anything about Hani.",
     chatTitle: "Ask Hani",
-    chatPowered: "Powered by Caffeine ☕",
+    chatPowered: "I built this AI to help you get to know me better!",
     chatPlaceholder: "Ask me anything…",
     chatThinking: "Thinking…",
     chatError: "Something went wrong. Please try again later.",
