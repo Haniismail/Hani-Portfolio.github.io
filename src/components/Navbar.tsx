@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Menu, X, TerminalSquare } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useLanguage } from "../context/LanguageContext";
 
@@ -11,7 +10,6 @@ interface NavbarProps {
 const Navbar = ({ onTerminalToggle }: NavbarProps) => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [showHint, setShowHint] = useState(false);
   const [terminalUsed, setTerminalUsed] = useState(false);
   const { t } = useLanguage();
 
@@ -29,29 +27,8 @@ const Navbar = ({ onTerminalToggle }: NavbarProps) => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  /* Show hint tooltip for first-time visitors */
-  useEffect(() => {
-    const seen = localStorage.getItem("terminal-hint-seen");
-    if (!seen) {
-      const timer = setTimeout(() => setShowHint(true), 2500);
-      return () => clearTimeout(timer);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (showHint) {
-      const timer = setTimeout(() => {
-        setShowHint(false);
-        localStorage.setItem("terminal-hint-seen", "true");
-      }, 5000);
-      return () => clearTimeout(timer);
-    }
-  }, [showHint]);
-
   const handleTerminalClick = () => {
-    setShowHint(false);
     setTerminalUsed(true);
-    localStorage.setItem("terminal-hint-seen", "true");
     onTerminalToggle();
   };
 
@@ -79,48 +56,27 @@ const Navbar = ({ onTerminalToggle }: NavbarProps) => {
             </a>
           ))}
 
-          {/* Terminal button with hint */}
-          <div className="relative">
-            <button
-              onClick={handleTerminalClick}
-              className={`${terminalUsed ? "" : "terminal-nav-btn "}p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors duration-200`}
-              aria-label="Open terminal"
-              title="Terminal mode"
-            >
-              <TerminalSquare size={18} />
-            </button>
-
-            {/* Tooltip hint */}
-            <AnimatePresence>
-              {showHint && (
-                <motion.div
-                  initial={{ opacity: 0, y: 8, scale: 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: 4, scale: 0.95 }}
-                  transition={{ duration: 0.3, ease: "easeOut" }}
-                  className="terminal-hint"
-                >
-                  <span className="terminal-hint-text">Try terminal mode! 🖥️</span>
-                  <div className="terminal-hint-arrow" />
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
+          <button
+            onClick={handleTerminalClick}
+            className={`${terminalUsed ? "" : "terminal-nav-btn "}p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors duration-200`}
+            aria-label="Open terminal"
+            title="Terminal mode"
+          >
+            <TerminalSquare size={18} />
+          </button>
 
           <LanguageSwitcher />
         </div>
 
         {/* Mobile toggle */}
         <div className="flex md:hidden items-center gap-2">
-          <div className="relative">
-            <button
-              onClick={handleTerminalClick}
-              className={`${terminalUsed ? "" : "terminal-nav-btn "}p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors duration-200`}
-              aria-label="Open terminal"
-            >
-              <TerminalSquare size={18} />
-            </button>
-          </div>
+          <button
+            onClick={handleTerminalClick}
+            className={`${terminalUsed ? "" : "terminal-nav-btn "}p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors duration-200`}
+            aria-label="Open terminal"
+          >
+            <TerminalSquare size={18} />
+          </button>
           <LanguageSwitcher />
           <button
             onClick={() => setOpen(!open)}
