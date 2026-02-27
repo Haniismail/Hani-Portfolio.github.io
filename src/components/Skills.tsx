@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { Code2, Server, Database, Cloud } from "lucide-react";
-import { portfolio } from "../data/portfolio";
+import { useLanguage } from "../context/LanguageContext";
 
 const icons = [Code2, Server, Database, Cloud];
 
 const Skills = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="skills" className="py-32 px-6 bg-muted">
       <div className="max-w-6xl mx-auto">
@@ -16,15 +18,15 @@ const Skills = () => {
           className="text-center mb-16"
         >
           <h2 className="text-sm font-medium text-primary tracking-widest uppercase mb-4">
-            Skills
+            {t.sections.skillsTitle}
           </h2>
           <p className="text-3xl md:text-4xl font-semibold text-foreground">
-            Technical Expertise
+            {t.sections.skillsSubtitle}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {portfolio.skills.map((skill, i) => {
+          {t.skills.map((skill, i) => {
             const Icon = icons[i];
             return (
               <motion.div

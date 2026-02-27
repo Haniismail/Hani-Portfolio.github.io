@@ -1,17 +1,27 @@
 import { useState, useRef, useEffect } from "react";
 import { MessageCircle, X, Send, Loader2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "../context/LanguageContext";
 
 type Message = { from: "bot" | "user"; text: string };
 
 const Chatbot = () => {
-  const [open, setOpen] = useState(false);
+  const { t } = useLanguage();
+  const [open, setOpen] = useState(true);
   const [messages, setMessages] = useState<Message[]>([
-    { from: "bot", text: "Hi! 👋 I'm Hani's assistant powered by Gemini AI. Ask me anything about Hani." },
+    { from: "bot", text: t.sections.chatGreeting },
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // Update the greeting when language changes
+  useEffect(() => {
+    setMessages((prev) => [
+      { from: "bot", text: t.sections.chatGreeting },
+      ...prev.slice(1),
+    ]);
+  }, [t.sections.chatGreeting]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -43,7 +53,7 @@ const Chatbot = () => {
     } catch {
       setMessages((prev) => [
         ...prev,
-        { from: "bot", text: "Something went wrong. Please try again later." },
+        { from: "bot", text: t.sections.chatError },
       ]);
     } finally {
       setLoading(false);
@@ -98,8 +108,8 @@ const Chatbot = () => {
                 <MessageCircle size={15} className="text-primary-foreground" />
               </div>
               <div>
-                <p className="font-semibold text-foreground text-sm leading-none">Hani's Assistant</p>
-                <p className="text-xs text-muted-foreground mt-0.5">Powered by Gemini AI</p>
+                <p className="font-semibold text-foreground text-sm leading-none">{t.sections.chatTitle}</p>
+                <p className="text-xs text-muted-foreground mt-0.5">{t.sections.chatPowered}</p>
               </div>
             </div>
 
@@ -111,11 +121,10 @@ const Chatbot = () => {
                   className={`flex ${msg.from === "user" ? "justify-end" : "justify-start"}`}
                 >
                   <span
-                    className={`inline-block max-w-[80%] px-3.5 py-2 rounded-2xl whitespace-pre-line leading-relaxed ${
-                      msg.from === "user"
+                    className={`inline-block max-w-[80%] px-3.5 py-2 rounded-2xl whitespace-pre-line leading-relaxed ${msg.from === "user"
                         ? "bg-primary text-primary-foreground rounded-br-sm"
                         : "bg-muted text-foreground rounded-bl-sm"
-                    }`}
+                      }`}
                   >
                     {msg.text}
                   </span>
@@ -125,7 +134,7 @@ const Chatbot = () => {
                 <div className="flex justify-start">
                   <span className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-2xl rounded-bl-sm bg-muted text-muted-foreground text-sm">
                     <Loader2 size={13} className="animate-spin" />
-                    Thinking…
+                    {t.sections.chatThinking}
                   </span>
                 </div>
               )}
@@ -138,7 +147,7 @@ const Chatbot = () => {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleCustom()}
-                placeholder="Ask me anything…"
+                placeholder={t.sections.chatPlaceholder}
                 disabled={loading}
                 className="flex-1 text-sm px-3.5 py-2 rounded-xl bg-muted text-foreground placeholder:text-muted-foreground outline-none focus:ring-2 focus:ring-primary/40 disabled:opacity-50"
               />

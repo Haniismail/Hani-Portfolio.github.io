@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
-import { portfolio } from "../data/portfolio";
+import { useLanguage } from "../context/LanguageContext";
 
 const Career = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="career" className="py-32 px-6 bg-muted">
       <div className="max-w-4xl mx-auto">
@@ -13,15 +15,15 @@ const Career = () => {
           className="text-center mb-16"
         >
           <h2 className="text-sm font-medium text-primary tracking-widest uppercase mb-4">
-            Career
+            {t.sections.careerTitle}
           </h2>
           <p className="text-3xl md:text-4xl font-semibold text-foreground">
-            Experience
+            {t.sections.careerSubtitle}
           </p>
         </motion.div>
 
         <div className="space-y-0">
-          {portfolio.career.map((role, i) => (
+          {t.career.map((role, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, x: -20 }}

@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { GraduationCap, Award } from "lucide-react";
-import { portfolio } from "../data/portfolio";
+import { useLanguage } from "../context/LanguageContext";
 
 const Education = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-32 px-6 bg-muted">
       <div className="max-w-4xl mx-auto">
@@ -14,10 +16,10 @@ const Education = () => {
           className="text-center mb-16"
         >
           <h2 className="text-sm font-medium text-primary tracking-widest uppercase mb-4">
-            Education
+            {t.sections.educationTitle}
           </h2>
           <p className="text-3xl md:text-4xl font-semibold text-foreground">
-            Background & Certifications
+            {t.sections.educationSubtitle}
           </p>
         </motion.div>
 
@@ -26,10 +28,10 @@ const Education = () => {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <GraduationCap size={20} className="text-primary" />
-              <h3 className="font-semibold text-foreground">Education</h3>
+              <h3 className="font-semibold text-foreground">{t.sections.educationLabel}</h3>
             </div>
             <div className="space-y-6">
-              {portfolio.education.map((edu, i) => (
+              {t.education.map((edu, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
@@ -50,10 +52,10 @@ const Education = () => {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <Award size={20} className="text-primary" />
-              <h3 className="font-semibold text-foreground">Certifications</h3>
+              <h3 className="font-semibold text-foreground">{t.sections.certificationsLabel}</h3>
             </div>
             <div className="space-y-4">
-              {portfolio.certifications.map((cert, i) => (
+              {t.certifications.map((cert, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 20 }}

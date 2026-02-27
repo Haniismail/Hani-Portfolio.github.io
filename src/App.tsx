@@ -1,7 +1,12 @@
+import { LanguageProvider } from "./context/LanguageContext";
 import Index from "./pages/Index";
 
 function App() {
-  return <Index />;
+  return (
+    <LanguageProvider>
+      <Index />
+    </LanguageProvider>
+  );
 }
 
 export default App;
