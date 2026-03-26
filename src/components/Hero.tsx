@@ -45,9 +45,7 @@ const Hero = () => {
             {t.sections.viewWork}
           </a>
           <a
-            href={t.links.resume}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`mailto:${t.email}?subject=Request for CV&body=Hello Hani,%0D%0A%0D%0AI came across your website and would like to request your CV for review.%0D%0A%0D%0ABest regards,%0D%0A[Your name/entity]`}
             className="px-8 py-3 rounded-full border border-border text-foreground font-medium text-sm hover:bg-muted transition-colors inline-flex items-center gap-2"
           >
             <Download size={16} />
